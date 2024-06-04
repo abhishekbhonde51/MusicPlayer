@@ -82,6 +82,17 @@ class _MusicHomeState extends State<MusicHome> {
               ],
             ),
           ),
+          Positioned(
+            child:Row(
+              children: [
+                Text("Discography", style: GoogleFonts.inter(
+                    color:const Color.fromRGBO(255, 46, 0, 1),
+                    fontWeight:FontWeight.w600,
+                    fontSize:16,
+
+                ),)
+              ],
+            ) ),
         ],
       ),
     );
