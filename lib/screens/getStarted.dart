@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:music_player/screens/homeMusic.dart';
 
 class GetStarted extends StatefulWidget {
   const GetStarted({Key? key}) : super(key: key);
@@ -41,7 +42,7 @@ class _GetStartedState extends State<GetStarted> {
             ],
           ),
           Positioned(
-            top: 440, // Adjust this position as needed
+            top: 500, // Adjust this position as needed
             left: 0,
             right: 0,
             child: Column(
@@ -74,23 +75,34 @@ class _GetStartedState extends State<GetStarted> {
               ],
             ),
           ),
-          Positioned(
-            top: 620,
-            left: 75,
-            child: Center(
-              child: Container(
-                width: 261,
-                height: 47,
-                decoration: const BoxDecoration(
-                    color: Color.fromRGBO(255, 46, 0, 1),
-                    borderRadius: BorderRadius.all(Radius.circular(19))),
-                child: Center(
-                  child: Text(
-                    "Get Started",
-                    style: GoogleFonts.inter(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 20),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MusicHome(),
+                ),
+              );
+            },
+            child: Positioned(
+              // top: 630,
+              // left: 75,
+              child: Center(
+                child: Container(
+                  margin: const EdgeInsets.only(top: 80),
+                  width: 261,
+                  height: 47,
+                  decoration: const BoxDecoration(
+                      color: Color.fromRGBO(255, 46, 0, 1),
+                      borderRadius: BorderRadius.all(Radius.circular(19))),
+                  child: Center(
+                    child: Text(
+                      "Get Started",
+                      style: GoogleFonts.inter(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 20),
+                    ),
                   ),
                 ),
               ),
