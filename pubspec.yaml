@@ -55,7 +55,11 @@ flutter:
   assets:
     - assets/spiderman.png
     - assets/musichome.png
-
+    - assets/album.png
+    - assets/album1.png
+    - assets/album2.png
+    - assets/album3.png
+    - assets/album4.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
