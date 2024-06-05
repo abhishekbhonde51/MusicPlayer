@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:music_player/screens/bottomNavigation.dart';
+import 'package:music_player/screens/music_player.dart';
 
 class MusicHome extends StatefulWidget {
   const MusicHome({super.key});
@@ -260,14 +260,24 @@ class _MusicHomeState extends State<MusicHome> {
                     children: [
                       Row(
                         children: [
-                          Container(
-                            height: 72,
-                            width: 67,
-                            decoration: const BoxDecoration(
-                                borderRadius: BorderRadius.all(
-                              Radius.circular(10),
-                            )),
-                            child: Image.asset('assets/album3.png'),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const MusicPlayer(),
+                                ),
+                              );
+                            },
+                            child: Container(
+                              height: 72,
+                              width: 67,
+                              decoration: const BoxDecoration(
+                                  borderRadius: BorderRadius.all(
+                                Radius.circular(10),
+                              )),
+                              child: Image.asset('assets/album3.png'),
+                            ),
                           ),
                           Column(
                             children: [
@@ -392,9 +402,6 @@ class _MusicHomeState extends State<MusicHome> {
                   );
                 }),
           ),
-          BottomNavigationBar(items:[
-              
-          ])
         ],
       ),
     );
